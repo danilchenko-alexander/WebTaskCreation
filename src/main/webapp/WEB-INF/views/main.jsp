@@ -18,6 +18,11 @@
             </div>
         </form>
     </div>
+    <div>
+        <c:if test="${message!=null}">
+            <div>${message}</div>
+        </c:if>
+    </div>
 </div>
 </body>
 </html>
