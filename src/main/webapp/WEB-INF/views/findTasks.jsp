@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>Task Page</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
 </head>
 <body>
 <div>
@@ -14,10 +15,9 @@
             <c:forEach items="${assignees}" var="assignee">
                 <option>${assignee}</option>
             </c:forEach>
-
         </select></div>
         <div>
-            Period: <select>
+            Period: <select id="period" onchange="insertDate()">
             <option>Not chosen</option>
             <option>Last Quarter</option>
             <option>Last Month</option>
@@ -52,6 +52,7 @@
             </tr>
         </c:forEach>
     </table>
+    <script src="/resources/js/date.js"></script>
 </div>
 </body>
 </html>
