@@ -76,6 +76,10 @@ public class TaskController {
             tasks = taskRepo.findByAssignee(assignee);
         }
 
+        if(!tasks.iterator().hasNext()){
+            model.put("message", "no data by criteria");
+        }
+
         model.put("tasks", tasks);
         return "findTasks";
     }

@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>Main page</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
 </head>
 <body>
 <div>
@@ -18,7 +19,7 @@
             </div>
         </form>
     </div>
-    <div>
+    <div class="message">
         <c:if test="${message!=null}">
             <div>${message}</div>
         </c:if>
