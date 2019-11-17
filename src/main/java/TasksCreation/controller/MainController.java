@@ -30,8 +30,12 @@ public class MainController {
         String start = form.get("startDate");
         String end = form.get("endDate");
 
-        if (!Validation.isDateValid(start, end)) {
+        if (start.isEmpty() || end.isEmpty()){
             model.put("message", "invalid date filling!");
+            return "main";
+        }
+        if (!Validation.isDateValid(start, end)) {
+            model.put("message", "invalid date format!");
             return "main";
         }
 

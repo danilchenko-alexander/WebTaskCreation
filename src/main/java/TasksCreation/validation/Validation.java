@@ -14,8 +14,12 @@ public class Validation {
         format.setLenient(false);
 
         try {
-            format.parse(start);
-            format.parse(end);
+            if(!start.isEmpty()) {
+                format.parse(start);
+            }
+            if(!end.isEmpty()) {
+                format.parse(end);
+            }
         } catch (ParseException e) {
             return false;
         }
